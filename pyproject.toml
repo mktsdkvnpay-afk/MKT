@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auto-sub"
+version = "0.1.0"
+description = "Tạo phụ đề SRT tự động từ file audio/video bằng OpenAI Whisper."
+readme = "README.md"
+authors = [{ name = "MKT Team" }]
+requires-python = ">=3.9"
+dependencies = [
+    "openai-whisper>=20231117",
+]
+
+[project.scripts]
+auto-sub = "auto_sub.cli:main"
